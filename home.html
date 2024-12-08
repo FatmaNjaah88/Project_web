@@ -1,0 +1,338 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            text-decoration: none;
+            padding: 0;
+            list-style: none;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular',
+                'Lucida Grande', 'Lucida Sans Unicode',
+                Geneva, Verdana, sans-serif;
+        }
+
+
+        body {
+            /* background-color: rgb(16, 50, 151); */
+            background-color:  rgb(32, 119, 114);
+          
+            height: 100%;
+            width: 100vw;
+        }
+
+
+        body::after {
+            content: "";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background-image:  url("Images/bookshelf.jpg");
+                /* linear-gradient(rgba(16, 50, 151, 0.377) 80%, rgba(255, 255, 255, 0.328)),
+                url("Images/bookshelf.jpg"); */
+            clip-path: circle(65% at right 60%);
+            top: 0;
+            z-index: 2;
+        }
+
+
+        .menu ul {
+            position: absolute;
+            top: 40px;
+            right: 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 30px;
+            width: 40%;
+            height: 50px;
+            z-index: 4;
+        }
+
+
+
+        .menu ul li a {
+            font-weight: 600;
+            font-size: 22px;
+            transition: 0.2s;
+            padding: 10px 9px;
+            color: azure;
+            display: block;
+            text-align: center;
+            
+            background-color: aliceblue;
+                color:rgb(2, 37, 33);
+                border-radius: 50%;
+        }
+
+
+        .menu ul li a:hover {
+
+            scale: 1.3;
+            text-shadow: 0 0 13px azure;
+            border: solid azure 5px;
+            border-radius: 50%;
+        }
+
+
+        .select {
+            border: solid rgb(50, 120, 120) 6px;
+            border-radius: 50%;
+        }
+
+        .one {
+            color: azure;
+            position: absolute;
+            top: 210px;
+            right: 50px;
+            border: azure 4px solid;
+            z-index: 4;
+            padding: 30px;
+            font-size: 32px;
+            font-weight: 900;
+            transition: 0.3s;
+            border-radius: 50%;
+            box-shadow: 0 0 13px 5px rgb(6, 131, 131);
+            background-color: aliceblue;
+            color:rgb(2, 37, 33)
+        }
+
+
+        .two {
+            color: azure;
+            position: absolute;
+            top: 300px;
+            right: 400px;
+            border: azure 4px solid;
+            z-index: 4;
+            padding: 30px;
+            font-size: 32px;
+            font-weight: 900;
+            transition: 0.3s;
+            border-radius: 50%;
+            box-shadow: 0 0 13px 5px rgb(6, 131, 131);
+            background-color: aliceblue;
+            color:rgb(2, 37, 33)
+        }
+
+
+
+
+
+        .thr {
+            font-size: 32px;
+            font-weight: 900;
+            padding: 30px;
+            border: azure 4px solid;
+            transition: 0.3s;
+            border-radius: 50%;
+            box-shadow: 0 0 13px 5px rgb(6, 131, 131);
+            color: azure;
+            position: absolute;
+            top: 450px;
+            right: 50px;
+            z-index: 4;
+            background-color: aliceblue;
+            color:rgb(2, 37, 33)
+        }
+
+
+
+        .four {
+            font-size: 30px;
+            font-weight: 600;
+            padding: 30px;
+            transition: 0.3s;
+            border-radius: 50%;
+            border: azure 4px solid;
+            box-shadow: 0 0 13px 5px rgb(6, 131, 131);
+            color: azure;
+            position: absolute;
+            top: 500px;
+            right: 400px;
+            z-index: 4;
+            background-color: aliceblue;
+            color:rgb(2, 37, 33)
+        }
+
+
+
+
+        .one:hover,
+        .two:hover,
+        .thr:hover,
+        .four:hover {
+            scale: 1.2;
+        }
+
+        span {
+            font-size: 80px;
+            font-weight: 800;
+            font-style: italic;
+            color: azure;
+            font-style: italic;
+            transition: 0.3s;
+            text-shadow: 0 0 10px white;
+        }
+
+        p {
+            font-size: 30px;
+            font-weight: 400;
+            text-indent: 10px;
+            position: absolute;
+            left: 40px;
+            width: 500px;
+            top: 40px;
+            color: azure;
+            font-style: italic;
+
+        }
+
+        .vid {
+            position: absolute;
+            top: 350px;
+            left: 40px;
+            height: 300px;
+            width: 600px;
+            border: solid azure 5px;
+        }
+
+
+        /* @media (min-width:950px) and (max-width:1150px) {}*/
+
+        @media (max-width:767px) {
+
+            .menu ul {
+                display: flex;
+                justify-content: space-around;
+                position: absolute;
+                top: 10px;
+                width: 100%;
+               
+            }
+            .menu ul li{
+                margin-left: 33px;
+            }
+            .menu ul li a {
+             
+                font-weight: 200;
+                font-size: 18px;
+            }
+
+            body::after {
+                clip-path: circle(60% at bottom);
+            }
+
+            p {
+                width: 200px;
+                top: 100px;
+                left: 10px;
+                font-weight: 200;
+                font-size: 16px;
+            }
+            .vid {
+                width: 200px;
+                height: 118px;
+                top: 125px;
+                left: 250px;
+            }
+
+            span {
+                font-weight: 600;
+                font-size: 46px;
+            }
+
+            .one {
+                font-weight: 600;
+                font-size: 20px;
+                top: 400px;
+                right: 24px;
+                background-color: aliceblue;
+                color:rgb(2, 37, 33)
+            }
+
+            .two {
+                font-weight: 600;
+                font-size: 20px;
+                top: 400px;
+                right: 220px;
+                background-color: aliceblue;
+                color:rgb(2, 37, 33)
+            }
+
+            .thr {
+                font-weight: 600;
+                font-size: 20px;
+                top: 500px;
+                right: 24px;
+                background-color: aliceblue;
+                color:rgb(2, 37, 33)
+            }
+
+            .four {
+                font-weight: 600;
+                font-size: 20px;
+                top: 500px;
+                right: 220px;
+                background-color: aliceblue;
+                color:rgb(2, 37, 33)
+            }
+
+           
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="menu">
+
+        <ul>
+            <li>
+                <a href="" class="select">Home</a>
+            </li>
+
+            <li>
+                <a href="books2.html">Books</a>
+            </li>
+
+            <li>
+                <a href="">Contact</a>
+            </li>
+
+            <li>
+                <a href="">About</a>
+            </li>
+
+            <li>
+                <a href="" class="login">Login</a>
+            </li>
+        </ul>
+
+
+    </div>
+
+    <div class="box">
+        <div class="one">10K search</div>
+        <div class="two">40K visitor</div>
+        <div class="thr">20K Author</div>
+        <div class="four">90K Books</div>
+    </div>
+
+    <p>
+        with <span>BOOK SHElf</span> Discover a world of
+        inspiration with
+        the finest books to enrish your mind
+        and elevate your life .
+    </p>
+    <video src="52635874.mp4" class="vid" controls loop muted></video>
+</body>
+
+</html>
